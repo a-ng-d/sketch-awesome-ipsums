@@ -53,7 +53,7 @@ export function getValues(gsheet, sheet) {
     var data = JSON.parse(dataString)
     return sortedData(data)
   } catch(e) {
-    UI.alert('Your spreadsheet must be public.', 'Have you read before pasting the link? 😑')
+    sketch.UI.alert('Your spreadsheet must be public.', 'Have you read before pasting the link? 😑')
     return null
   }
 
