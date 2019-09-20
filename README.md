@@ -2,7 +2,10 @@
 
 ## What's this?
 
-Lorem ipsum… Could you remember your clients/stakeholders/boss watching your first UI iteration. Obviously, as was too complicated to write every contents without any context, to get an idea on how the UI will drive the content, there were Lorem ipsum! "Lorem ipsum dolor sit amet[…]mollit anim id est laborum.", quite repetitive and boring, right?
+Lorem ipsum… Could you remember your clients/stakeholders/boss watching your first UI iteration. Obviously, as was too complicated to write every contents without any context, to get an idea on how the UI will drive the content, there were Lorem ipsum!
+
+>"Lorem ipsum dolor sit amet[…]mollit anim id est laborum.", quite repetitive and boring, right?
+
 Designers are part of a company's creative core and having fun while working is as important as shooting the 💩. If you create your own lorem ipsum, to use it in your UI. Will it make the journey more fun?
 
 ## Installation
