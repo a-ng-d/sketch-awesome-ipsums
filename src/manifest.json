@@ -7,6 +7,7 @@
   "identifier" : "com.involtag.sketch.awesome-ipsums",
   "version" : "0.1.0",
   "icon": "icon.png",
+  "appcast": "https://github.com/inVoltag/awesome-ipsums/blob/master/.appcast.xml",
   "commands" : [
     {
       "script" : "SyncIpsum.js",
