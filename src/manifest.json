@@ -4,7 +4,7 @@
   "authorEmail" : "a.grimaud@involt.io",
   "description" : "Generate ipsums from an external Google spreadsheet. Make these datas collaborative!",
   "homepage": "https://github.com/inVoltag/awesome-ipsums",
-  "identifier" : "com.involtag.sketch.awesome-ipsums",
+  "identifier" : "plugin.sketch.awesome-ipsums",
   "version" : "0.1.0",
   "icon": "icon.png",
   "appcast": "https://github.com/inVoltag/awesome-ipsums/blob/master/.appcast.xml",

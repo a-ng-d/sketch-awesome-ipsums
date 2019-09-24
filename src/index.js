@@ -7,31 +7,35 @@ export let
   selectedCount = selectedLayers.length,
   canvasView = context.document.contentDrawView(),
   selectedArtboard = document.selectedPage.layers[0],
-  selectedPage = document.selectedPage
+  selectedPage = document.selectedPage,
+  pluginIdentifier = 'plugin.sketch.awesome-ipsums'
 
 
 export function getPreference(key) {
 
-  var pluginCache = 'com.involtag.sketch.awesome-ipsums'
+    var userDefaults = NSUserDefaults.standardUserDefaults();
+    if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
+      var defaultPreferences = NSMutableDictionary.alloc().init();
+      defaultPreferences.setObject_forKey('empty', key);
 
-  var userDefaults = NSUserDefaults.standardUserDefaults();
-  return userDefaults.dictionaryForKey(pluginCache).objectForKey(key);
+      userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
+      userDefaults.synchronize();
+    }
+    return userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key);
 
 }
 
 export function savePreference(key, value) {
 
-  var pluginCache = 'com.involtag.sketch.awesome-ipsums'
-
-  var userDefaults = NSUserDefaults.standardUserDefaults();
-  if (!userDefaults.dictionaryForKey(pluginCache)) {
+    var userDefaults = NSUserDefaults.standardUserDefaults();
+    if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
       var preferences = NSMutableDictionary.alloc().init();
-  } else {
-      var preferences = NSMutableDictionary.dictionaryWithDictionary(userDefaults.dictionaryForKey(pluginCache));
-  }
-  preferences.setObject_forKey(value, key);
-  userDefaults.setObject_forKey(preferences, pluginCache);
-  userDefaults.synchronize();
+    } else {
+      var preferences = NSMutableDictionary.dictionaryWithDictionary(userDefaults.dictionaryForKey(pluginIdentifier));
+    }
+    preferences.setObject_forKey(value, key);
+    userDefaults.setObject_forKey(preferences, pluginIdentifier);
+    userDefaults.synchronize();
 
 }
 
