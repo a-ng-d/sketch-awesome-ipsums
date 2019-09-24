@@ -1,6 +1,6 @@
 import sketch from 'sketch'
 import {getPreference, getValues, sortedData, getIpsum} from './index'
-import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage} from './index'
+import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index'
 
 var ID = getPreference('spreadsheetID')
 
@@ -28,7 +28,7 @@ function createIpsum() {
 
 }
 
-if(ID != null) {
+if(ID !== 'empty') {
   createIpsum()
 } else {
   sketch.UI.alert('Synchronize first your ipsums', 'Link your Google 💩 via the Sync. menu')

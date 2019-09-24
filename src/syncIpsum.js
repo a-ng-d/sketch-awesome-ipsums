@@ -1,10 +1,11 @@
 import sketch from 'sketch'
-import {getPreference, savePreference} from './index'
+import {getPreference, savePreference, pluginCache} from './index'
+console.log(getPreference('spreadsheetID'))
 
 sketch.UI.getInputFromUser(
   "Sync your awesome ipsums from your Google 💩",
   {
-    description: 'Get collaborative! First publish on the Web 👉 File > Publish on the Web 👈',
+    description: 'Get collaborative! First publish on the Web (File > Publish on the Web), then copy the URL and paste it below.',
     numberOfLines: 3,
     initialValue: alreadySync()
   },
@@ -35,7 +36,7 @@ function alreadySync() {
   var google = validateURL()
   var url = 'https://docs.google.com/spreadsheets/d/'+ ID
 
-  if (ID = null || url.indexOf(google) == -1) {
+  if (ID == 'empty' || url.indexOf(google) == -1) {
     return
   } else {
     return url
