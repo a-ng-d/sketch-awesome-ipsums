@@ -11,8 +11,8 @@
   "commands" : [
     {
       "script" : "SyncIpsum.js",
-      "name" : "🔄 Sync. ipsums from a Google Sheet",
-      "description": "Import your Lorem ipsums from a Google Sheet.",
+      "name" : "🔄 Sync. ipsums from a Google spreadsheet",
+      "description": "Import your ipsums from a Google spreadsheet.",
       "shortcut": "ctrl option i",
       "icon": "sync-icon.png",
       "handlers" : {
@@ -22,8 +22,8 @@
     },
     {
       "script" : "createIpsum.js",
-      "name" : "Create a text prefilled with ipsum",
-      "description": "Create a text area prefilled with a random ipsum from the Google Sheet.",
+      "name" : "Create an ipsum prefilled text",
+      "description": "Create a prefilled text area with a random ipsum from the Google spreadsheet.",
       "shortcut": "ctrl option c",
       "handlers" : {
         "run" : "onRun"
@@ -33,7 +33,7 @@
     {
       "script" : "updateIpsum.js",
       "name" : "Update a text with ipsum",
-      "description": "Fill the selected text with random ipsums from the Google Sheet.",
+      "description": "Fill the selected text with a random ipsum from the Google spreadsheet.",
       "shortcut": "ctrl option u",
       "handlers" : {
         "run" : "onRun"

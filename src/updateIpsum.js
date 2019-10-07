@@ -26,5 +26,5 @@ function updateIpsum() {
 if(ID !== 'empty') {
   updateIpsum()
 } else {
-  sketch.UI.alert('Synchronize first your ipsums', 'Link your Google 💩 via the Sync. menu')
+  sketch.UI.alert('Synchronize first your ipsums', 'Link your Google spreadsheet via the Sync. menu')
 }

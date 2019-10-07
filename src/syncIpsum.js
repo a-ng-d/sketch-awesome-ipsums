@@ -3,16 +3,16 @@ import {getPreference, savePreference, pluginCache} from './index'
 console.log(getPreference('spreadsheetID'))
 
 sketch.UI.getInputFromUser(
-  "Sync your awesome ipsums from your Google 💩",
+  "Sync. your awesome ipsums from your Google spreadsheet",
   {
-    description: 'Get collaborative! First publish on the Web (File > Publish on the Web), then copy the URL and paste it below.',
+    description: 'Get collaborative! First publish on the Web (File > Publish on the Web), then copy the URL and paste it below 👇',
     numberOfLines: 3,
     initialValue: alreadySync()
   },
   (err, value) => {
     var google = validateURL()
     if (err || value.indexOf(google) == -1) {
-      return sketch.UI.alert('Houston, there\'s a problem 🙄', 'Please, try again.')
+      return sketch.UI.alert('Houston, there\'s a problem 😓', 'Please, try again.')
     } else {
         var ID = getID(value)
         savePreference('spreadsheetID', ID)
