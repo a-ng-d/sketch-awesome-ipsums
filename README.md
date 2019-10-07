@@ -6,7 +6,7 @@
 
 ## Tutorial
 
-### Create the spreadsheet
+### Create a spreadsheet
 
 Set a spreadsheet on Google Sheets… Then, follow these rules:
 - Set each sheet with 2 columns and define a fixed header with the first line. Name each column as you wish
@@ -14,7 +14,7 @@ Set a spreadsheet on Google Sheets… Then, follow these rules:
 
 Here an example of a [well-formatted spreadsheet](https://docs.google.com/spreadsheets/d/1srDnvM8Wt7vzicCyrRxyDGsgU8KVlA30h2_2WUdv50Y/edit#gid=0).
 
-### Publish on the web
+### Publish to the web
 
 The spreadsheet must be public, to avoid any authentication and allow Sketch to pick a cell:
 - Go to the `File > Publish to the web`
