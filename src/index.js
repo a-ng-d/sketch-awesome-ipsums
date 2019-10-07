@@ -13,29 +13,29 @@ export let
 
 export function getPreference(key) {
 
-    var userDefaults = NSUserDefaults.standardUserDefaults();
-    if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
-      var defaultPreferences = NSMutableDictionary.alloc().init();
-      defaultPreferences.setObject_forKey('empty', key);
+  var userDefaults = NSUserDefaults.standardUserDefaults();
+  if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
+    var defaultPreferences = NSMutableDictionary.alloc().init();
+    defaultPreferences.setObject_forKey('empty', key);
 
-      userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
-      userDefaults.synchronize();
-    }
-    return userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key);
+    userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
+    userDefaults.synchronize();
+  }
+  return userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key);
 
 }
 
 export function savePreference(key, value) {
 
-    var userDefaults = NSUserDefaults.standardUserDefaults();
-    if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
-      var preferences = NSMutableDictionary.alloc().init();
-    } else {
-      var preferences = NSMutableDictionary.dictionaryWithDictionary(userDefaults.dictionaryForKey(pluginIdentifier));
-    }
-    preferences.setObject_forKey(value, key);
-    userDefaults.setObject_forKey(preferences, pluginIdentifier);
-    userDefaults.synchronize();
+  var userDefaults = NSUserDefaults.standardUserDefaults();
+  if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
+    var preferences = NSMutableDictionary.alloc().init();
+  } else {
+    var preferences = NSMutableDictionary.dictionaryWithDictionary(userDefaults.dictionaryForKey(pluginIdentifier));
+  }
+  preferences.setObject_forKey(value, key);
+  userDefaults.setObject_forKey(preferences, pluginIdentifier);
+  userDefaults.synchronize();
 
 }
 
