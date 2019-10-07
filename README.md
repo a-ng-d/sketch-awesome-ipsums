@@ -1,12 +1,40 @@
 # Awesome Ipsums - Welcome to the world of collaborative content
 
-## What's this?
+## Intro
 
-Lorem ipsum… Could you remember your clients/stakeholders/boss watching your first UI iteration. Obviously, as was too complicated to write every contents without any context, to get an idea on how the UI will drive the content, there were Lorem ipsum!
+![overview gif](img/overview.gif "Overview animation")
 
->"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+## Tutorial
 
-Quite repetitive and boring, right? Designers are part of a company's creative core and having fun while working is as important as shooting the 💩. If you create your own lorem ipsum, to use it in your UI. Will it make your journey more fun?
+### Create the spreadsheet
+
+Set a spreadsheet on Google Sheets… Then, follow these rules:
+- Set each sheet with 2 columns and define a fixed header with the first line. Name each column as you wish
+- Keep this structure!
+
+Here an example of a [well-formatted spreadsheet](https://docs.google.com/spreadsheets/d/1srDnvM8Wt7vzicCyrRxyDGsgU8KVlA30h2_2WUdv50Y/edit#gid=0).
+
+### Publish on the web
+
+The spreadsheet must be public, to avoid any authentication and allow Sketch to pick a cell:
+- Go to the `File > Publish to the web`
+- Click `Publish`
+
+### Link this spreadsheet
+
+Once published:
+- Copy the spreadsheet's URL (from the URL bar)
+- On Sketch, go to `Plugins > Awesome ipsums > Sync. ipsums from a Google Sheets`
+- Paste the URL into the text field
+
+## Just why?
+
+**Lorem ipsum** is often used to design UI, by adding fake text in it. Nevertheless, there are some issues:
+- It does not make any sense
+- It is quite boring and repetitive
+
+**Lorem ipsum** could be fun, relevant, and fully personalized. How to involve a team to create, collect and reuse his own content. An online spreadsheet works well because it is always reachable and up-to-date.
+
 
 ## Installation
 
@@ -14,18 +42,14 @@ Quite repetitive and boring, right? Designers are part of a company's creative c
 - Un-zip
 - Double-click on awesome-ipsums.sketchplugin
 
-## Google 💩
+## Contribution
 
-Google Sheets allows to involve each designers in creating their own lorem ipsums. Jokes, quotes, facts… The only limit is your own imagination. Lorem ipsums in the spreadsheet will be imported into your sketch file.
+- Submit bugs or improvement requests by opening [issues](https://github.com/inVoltag/awesome-ipsums/issues)
+- Feel free to make pull requests 😎
 
-Important point: The sheet must be built with 2 columns :
-- The first one is the name of your ipsum
-- The second one is the content
+## Support
 
-Do not forget to set a fixed header.
+- Follow me on [Twitter 🐦](https://twitter.com/inVoltag)
+- [Shoot me a coffee ☕️](http://paypal.me/augrimaud)
 
-Here an example of a [well-formatted spreadsheet](https://docs.google.com/spreadsheets/d/1srDnvM8Wt7vzicCyrRxyDGsgU8KVlA30h2_2WUdv50Y/edit#gid=0) (it will be a spreadsheet test).
-
-## Feedback
-
-Feel free to give feedback. This is a pre-released/alpha/early-access plugin.
+⚡️
