@@ -8,7 +8,7 @@
 
 ### Create a spreadsheet
 
-Set a spreadsheet on Google Sheets… Then, follow these rules:
+Create a spreadsheet on Google Sheets… Then, follow these rules:
 - Set each sheet with 2 columns and define a fixed header with the first line. Name each column as you wish
 - Keep this structure!
 
@@ -17,24 +17,24 @@ Here an example of a [well-formatted spreadsheet](https://docs.google.com/spread
 ### Publish to the web
 
 The spreadsheet must be public, to avoid any authentication and allow Sketch to pick a cell:
-- Go to the `File > Publish to the web`
+- Go to `File > Publish to the web`
 - Click `Publish`
 
 ### Link this spreadsheet
 
 Once published:
-- Copy the spreadsheet's URL (from the URL bar)
-- On Sketch, go to `Plugins > Awesome ipsums > Sync. ipsums from a Google Sheets`
+- Copy the spreadsheet's URL (⚠️from the URL bar!)
+- On Sketch, go to `Plugins > Awesome ipsums > Sync. ipsums from a Google spreadsheet`
 - Paste the URL into the text field
 
 ## Just why?
 
-**Lorem ipsum** is often used to design UI, by adding fake text in it. Nevertheless, there are some issues:
+**Lorem ipsum** is often used to simulate content into a designed web page. Nevertheless, there may be some issues:
 - It does not make any sense
 - It is quite boring and repetitive
 
-**Lorem ipsum** could be fun, relevant, and fully personalized. How to involve a team to create, collect and reuse his own content. An online spreadsheet works well because it is always reachable and up-to-date.
-
+**Lorem ipsum** could be fun, relevant, and fully personalized. A design team can create, collect and reuse his own fake content. How to get this team involved in collecting content?
+👉An online spreadsheet, because it is easy to maintain and always up-to-date.
 
 ## Installation
 
@@ -52,4 +52,4 @@ Once published:
 - Follow me on [Twitter 🐦](https://twitter.com/inVoltag)
 - [Shoot me a coffee ☕️](http://paypal.me/augrimaud)
 
-⚡️
+inVoltag/Aurélien Grimaud ⚡️
