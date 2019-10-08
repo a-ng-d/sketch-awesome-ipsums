@@ -8,5 +8,12 @@
        <description/>
        <enclosure url="https://github.com/inVoltag/awesome-ipsums/releases/download/v0.1-alpha/awesome-ipsums.sketchplugin.zip" sparkle:version="0.1.0"/>
      </item>
+     <item>
+        <title>Version 0.1.1</title>
+        <description>
+          https://github.com/inVoltag/awesome-ipsums/releases/tag/v0.1.1
+        <description/>
+        <enclosure url="https://github.com/inVoltag/awesome-ipsums/releases/download/v0.1.1/awesome-ipsums.sketchplugin.zip" sparkle:version="0.1.1"/>
+      </item>
    </channel>
 </rss>
