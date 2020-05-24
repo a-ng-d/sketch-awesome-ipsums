@@ -1,6 +1,6 @@
-import sketch from 'sketch'
-import {getPreference, savePreference, pluginCache} from './index'
-console.log(getPreference('spreadsheetID'))
+import sketch from 'sketch';
+import {getPreference, savePreference, pluginCache} from './index';
+console.log(getPreference('spreadsheetID'));
 
 sketch.UI.getInputFromUser(
   "Sync. your awesome ipsums from your Google spreadsheet",
@@ -10,13 +10,13 @@ sketch.UI.getInputFromUser(
     initialValue: alreadySync()
   },
   (err, value) => {
-    var google = validateURL()
+    var google = validateURL();
     if (err || value.indexOf(google) == -1) {
       return sketch.UI.alert('Houston, there\'s a problem 😓', 'Please, try again.')
     } else {
-        var ID = getID(value)
-        savePreference('spreadsheetID', ID)
-        sketch.UI.message('The ipsums are on the track! 🔥')
+        var ID = getID(value);
+        savePreference('spreadsheetID', ID);
+        sketch.UI.message('The ipsums are on the track! 🔥');
         console.log(getPreference('spreadsheetID'))
     }
   }
@@ -24,17 +24,17 @@ sketch.UI.getInputFromUser(
 
 function getID(input) {
 
-  var splitURL = input.split('/')
-  var ID = splitURL[5]
+  var splitURL = input.split('/');
+  var ID = splitURL[5];
   return ID
 
-}
+};
 
 function alreadySync() {
 
-  var ID = getPreference('spreadsheetID')
-  var google = validateURL()
-  var url = 'https://docs.google.com/spreadsheets/d/'+ ID
+  var ID = getPreference('spreadsheetID');
+  var google = validateURL();
+  var url = 'https://docs.google.com/spreadsheets/d/'+ ID;
 
   if (ID == 'empty' || url.indexOf(google) == -1) {
     return
@@ -46,9 +46,9 @@ function alreadySync() {
 
 function validateURL() {
 
-  var standardURL = 'https://docs.google.com/'
-  var splitURL = standardURL.split('/')
-  var getGoogle = splitURL[2]
+  var standardURL = 'https://docs.google.com/';
+  var splitURL = standardURL.split('/');
+  var getGoogle = splitURL[2];
   return getGoogle
 
 }

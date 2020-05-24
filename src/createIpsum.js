@@ -1,14 +1,14 @@
-import sketch from 'sketch'
-import {getPreference, getValues, sortedData, getIpsum} from './index'
-import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index'
+import sketch from 'sketch';
+import {getPreference, getValues, sortedData, getIpsum} from './index';
+import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index';
 
-var ID = getPreference('spreadsheetID')
+var ID = getPreference('spreadsheetID');
 
 function createIpsum() {
 
-  var datas = getValues(ID, 1)
-  var awesomeIpsum = getIpsum(datas)
-  var origin = canvasView.viewCenterInAbsoluteCoordinatesForViewPort(canvasView.viewPort())
+  var datas = getValues(ID, 1);
+  var awesomeIpsum = getIpsum(datas);
+  var origin = canvasView.viewCenterInAbsoluteCoordinatesForViewPort(canvasView.viewPort());
   var newText = new text({
     parent: selectedPage,
     text: awesomeIpsum[1],
@@ -23,10 +23,10 @@ function createIpsum() {
     fixedWidth: 2
   })
 
-  newText.frame.x = Math.floor((origin.x) - (newText.frame.width / 2))
+  newText.frame.x = Math.floor((origin.x) - (newText.frame.width / 2));
   newText.frame.y = Math.floor((origin.y) - (newText.frame.height / 2))
 
-}
+};
 
 if(ID !== 'empty') {
   createIpsum()
