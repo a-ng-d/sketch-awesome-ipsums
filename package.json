@@ -6,7 +6,7 @@
     "sketch": ">=49.0"
   },
   "repository": {
-    "url": "https://github.com/inVoltag/awesome-ipsums"
+    "url": "https://github.com/inVoltag/sketch-awesome-ipsums"
   },
   "skpm": {
     "name": "sketch-awesome-ipsums",

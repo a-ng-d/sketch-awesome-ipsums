@@ -3,11 +3,11 @@
   "name" : "Awesome ipsums",
   "authorEmail" : "a.grimaud@involt.io",
   "description" : "Generate ipsums from an external Google spreadsheet. Make these datas collaborative!",
-  "homepage": "https://github.com/inVoltag/awesome-ipsums",
+  "homepage": "https://github.com/inVoltag/sketch-awesome-ipsums",
   "identifier" : "plugin.sketch.awesome-ipsums",
   "version" : "1.0.0",
   "icon": "icon.png",
-  "appcast": "https://github.com/inVoltag/awesome-ipsums/blob/master/.appcast.xml",
+  "appcast": "https://github.com/inVoltag/sketch-awesome-ipsums/blob/master/.appcast.xml",
   "commands" : [
     {
       "script" : "SyncIpsum.js",
