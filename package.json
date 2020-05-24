@@ -1,5 +1,5 @@
 {
-  "name": "awesome-ipsums",
+  "name": "sketch-awesome-ipsums",
   "description": "Generate ipsums from an external Google spreadsheet. Make these datas collaborative!",
   "version": "1.0.0",
   "engines": {
@@ -9,7 +9,7 @@
     "url": "https://github.com/inVoltag/awesome-ipsums"
   },
   "skpm": {
-    "name": "awesome-ipsums",
+    "name": "sketch-awesome-ipsums",
     "manifest": "src/manifest.json",
     "main": "awesome-ipsums.sketchplugin",
     "assets": [
