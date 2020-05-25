@@ -11,7 +11,7 @@
   "skpm": {
     "name": "sketch-awesome-ipsums",
     "manifest": "src/manifest.json",
-    "main": "sketch-awesome-ipsums.sketchplugin",
+    "main": "awesome-ipsums.sketchplugin",
     "assets": [
       "assets/**/*"
     ],
