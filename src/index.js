@@ -56,7 +56,7 @@ export function getValues(gsheet, sheet) {
   try {
     return JSON.parse(dataString)
   } catch(e) {
-    sketch.UI.alert('Your spreadsheet must be public.', 'Have you read before pasting the link? 😑');
+    sketch.UI.alert('Something went wrong with your spreadsheet', 'Check your internet connection or your spreadsheet format 🔥');
     return null
   };
 
