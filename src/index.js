@@ -41,7 +41,7 @@ export function savePreference(key, value) {
 
 export function getValues(gsheet, sheet) {
 
-  var url = 'https://spreadsheets.google.com/feeds/list/' + gsheet + '/' + sheet + '/public/values?alt=json';
+  var url = `https://opensheet.vercel.app/${gsheet}/${sheet.replace(/\s/g, '%20')}`;
 
   var request = NSMutableURLRequest.new();
   request.setHTTPMethod('GET');
