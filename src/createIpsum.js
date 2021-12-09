@@ -1,12 +1,14 @@
 import sketch from 'sketch';
 import {getPreference, getValues, sortedData, getIpsum} from './index';
 import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index';
+import syncIpsum from './syncIpsum';
 
-var ID = getPreference('spreadsheetID');
+var ID = getPreference('spreadsheetID'),
+    SHEET = getPreference('sheetName');
 
 function createIpsum() {
 
-  var datas = getValues(ID, 1);
+  var datas = getValues(ID, SHEET);
   var awesomeIpsum = getIpsum(datas);
   var origin = canvasView.viewCenterInAbsoluteCoordinatesForViewPort(canvasView.viewPort());
   var newText = new text({
@@ -28,7 +30,7 @@ function createIpsum() {
 
 };
 
-if(ID !== 'empty') {
+if(ID != null && SHEET != null) {
   createIpsum()
 } else {
   sketch.UI.alert('Synchronize first your ipsums', 'Link your Google spreadsheet via the Sync. menu')

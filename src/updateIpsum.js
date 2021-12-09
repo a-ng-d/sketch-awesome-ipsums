@@ -2,11 +2,12 @@ import sketch from 'sketch';
 import {getPreference, getValues, sortedData, getIpsum} from './index';
 import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index';
 
-var ID = getPreference('spreadsheetID');
+var ID = getPreference('spreadsheetID'),
+    SHEET = getPreference('sheetName');
 
 function updateIpsum() {
 
-  var datas = getValues(ID, 1);
+  var datas = getValues(ID, SHEET);
   if (selectedCount === 0) {
     sketch.UI.message('No layers are selected')
   } else {
@@ -23,7 +24,7 @@ function updateIpsum() {
 
 };
 
-if(ID !== 'empty') {
+if(ID != null && SHEET != null) {
   updateIpsum()
 } else {
   sketch.UI.alert('Synchronize first your ipsums', 'Link your Google spreadsheet via the Sync. menu')
