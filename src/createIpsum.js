@@ -16,13 +16,14 @@ function createIpsum() {
     text: awesomeIpsum[1],
     name: 'New ipsum',
     style: {
-      alignment: 0,
-      borders: [],
+      alignment: 'left',
+      borders: []
     },
     frame: {
       width: 400,
+      height: 400
     },
-    fixedWidth: 2
+    fixedWidth: true
   })
 
   newText.frame.x = Math.floor((origin.x) - (newText.frame.width / 2));
