@@ -54,10 +54,14 @@ export function getValues(gsheet, sheet) {
   var dataString = NSString.alloc().initWithData_encoding(response, NSUTF8StringEncoding);
 
   try {
-    return JSON.parse(dataString)
+    if (dataString.indexOf('{"error":"Unable to parse range:') == -1) {
+      return JSON.parse(dataString)
+    } else {
+      throw new Error("Something went badly wrong!")
+    }
   } catch(e) {
-    sketch.UI.alert('Something went wrong with your spreadsheet', 'Check your internet connection or your spreadsheet format 🔥');
-    return null
+    sketch.UI.alert('Something went wrong with your spreadsheet', 'Check your internet connection or the sheet name');
+    throw new Error("Something went badly wrong!")
   };
 
 };
