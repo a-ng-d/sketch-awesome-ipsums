@@ -5,7 +5,7 @@
   "description" : "Generate ipsums from an external Google spreadsheet. Make these datas collaborative!",
   "homepage": "https://github.com/inVoltag/sketch-awesome-ipsums",
   "identifier" : "plugin.sketch.awesome-ipsums",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "icon": "icon.png",
   "appcast": "https://github.com/inVoltag/sketch-awesome-ipsums/blob/master/.appcast.xml",
   "commands" : [

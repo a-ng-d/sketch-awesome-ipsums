@@ -11,5 +11,14 @@
       <description/>
       <enclosure url="https://github.com/inVoltag/awesome-ipsums/releases/download/v1.0.0/awesome-ipsums.sketchplugin.zip" sparkle:version="1.0.0"/>
     </item>
+    <item>
+      <title>v1.1.0</title>
+      <description>
+        Google has stopped supporting V3 API since august 2021. So, the plugin cannot work without the link between Sketch and Google Spreadsheet. Here is the list of changes:
+        - API workflow has been edited (kudos to @benborgers for his opensheet project, that allows to get the Google spreadsheet data without authentication)
+        - The spreadsheet tab name is required to make the plugin operate
+      <description/>
+      <enclosure url="https://github.com/inVoltag/awesome-ipsums/releases/download/v1.1.0/awesome-ipsums.sketchplugin.zip" sparkle:version="1.0.0"/>
+    </item>
   </channel>
 </rss>
