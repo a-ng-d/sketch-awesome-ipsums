@@ -1,12 +1,14 @@
 import sketch from 'sketch';
-import {getPreference, getValues, sortedData, getIpsum} from './index';
-import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index';
+import syncIpsum from './syncIpsum';
+import { getPreference, getValues, sortedData, getIpsum } from './index';
+import { text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache } from './index';
 
-var ID = getPreference('spreadsheetID');
+var ID = getPreference('spreadsheetID'),
+    SHEET = getPreference('sheetName');
 
 function createIpsum() {
 
-  var datas = getValues(ID, 1);
+  var datas = getValues(ID, SHEET);
   var awesomeIpsum = getIpsum(datas);
   var origin = canvasView.viewCenterInAbsoluteCoordinatesForViewPort(canvasView.viewPort());
   var newText = new text({
@@ -14,13 +16,14 @@ function createIpsum() {
     text: awesomeIpsum[1],
     name: 'New ipsum',
     style: {
-      alignment: 0,
-      borders: [],
+      alignment: 'left',
+      borders: []
     },
     frame: {
       width: 400,
+      height: 400
     },
-    fixedWidth: 2
+    fixedWidth: true
   })
 
   newText.frame.x = Math.floor((origin.x) - (newText.frame.width / 2));
@@ -28,8 +31,8 @@ function createIpsum() {
 
 };
 
-if(ID !== 'empty') {
+if (ID != null || SHEET != null) {
   createIpsum()
 } else {
-  sketch.UI.alert('Synchronize first your ipsums', 'Link your Google spreadsheet via the Sync. menu')
+  syncIpsum()
 }

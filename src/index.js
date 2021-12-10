@@ -16,7 +16,7 @@ export function getPreference(key) {
   var userDefaults = NSUserDefaults.standardUserDefaults();
   if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
     var defaultPreferences = NSMutableDictionary.alloc().init();
-    defaultPreferences.setObject_forKey('empty', key);
+    //defaultPreferences.setObject_forKey('', key);
 
     userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
     userDefaults.synchronize()
@@ -41,7 +41,7 @@ export function savePreference(key, value) {
 
 export function getValues(gsheet, sheet) {
 
-  var url = 'https://spreadsheets.google.com/feeds/list/' + gsheet + '/' + sheet + '/public/values?alt=json';
+  var url = `https://opensheet.vercel.app/${gsheet}/${sheet.replace(/\s/g, '%20')}`;
 
   var request = NSMutableURLRequest.new();
   request.setHTTPMethod('GET');
@@ -54,57 +54,31 @@ export function getValues(gsheet, sheet) {
   var dataString = NSString.alloc().initWithData_encoding(response, NSUTF8StringEncoding);
 
   try {
-    var data = JSON.parse(dataString);
-    return sortedData(data)
+    if (dataString.indexOf('{"error":"Unable to parse range:') == -1) {
+      return JSON.parse(dataString)
+    } else {
+      throw new Error("Something went badly wrong!")
+    }
   } catch(e) {
-    sketch.UI.alert('Your spreadsheet must be public.', 'Have you read before pasting the link? 😑');
-    return null
+    sketch.UI.alert('Something went wrong with your spreadsheet', 'Check your internet connection or the sheet name');
+    throw new Error("Something went badly wrong!")
   };
-
-};
-
-export function sortedData(data) {
-
-  var values = {};
-  data.feed.entry.forEach(function(entry) {
-    Object.keys(entry).filter(function(key) {
-      return key.indexOf('gsx$') == 0
-    }).forEach(function(key) {
-      var newKey = key.substring(4)
-      if (!(values.hasOwnProperty(newKey))) {
-        values[newKey] = []
-      };
-
-      var newValue = entry[key]['$t'];
-      if (newValue) {
-        var ipsum = values[newKey];
-        ipsum.push(newValue)
-      };
-    })
-  });
-  return values
 
 };
 
 export function getIpsum(datas) {
 
-  var data, size, fcolumn, scolumn, names, ipsums, name, ipsum, duo;
-  data = Object.keys(datas);
+  let size, randomIpsum, name, ipsum, duo;
 
-  fcolumn = data[0];
-  scolumn = data[1];
-  names = datas[fcolumn];
-  ipsums = datas[scolumn];
-  size = names.length;
-  const randomizer = Math.floor((Math.random() * size));
+  size = datas.length;
+  randomIpsum = datas[Math.floor((Math.random() * size))];
 
-  name = names[randomizer];
-  ipsum = ipsums[randomizer];
+  name = randomIpsum[Object.keys(randomIpsum)[0]];
+  ipsum = randomIpsum[Object.keys(randomIpsum)[1]];
 
   duo = [];
   duo.push(name);
   duo.push(ipsum);
-
   return duo
 
 }
