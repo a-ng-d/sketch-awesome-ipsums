@@ -21,7 +21,7 @@ export function getPreference(key) {
     userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
     userDefaults.synchronize()
   };
-  return userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key) == null ? '' : userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key)
+  return userDefaults.dictionaryForKey(pluginIdentifier).objectForKey(key)
 
 };
 
