@@ -7,7 +7,7 @@ export default function syncIpsum() {
     {
       description: 'First publish on the Web (File > Publish on the Web), then copy the URL and paste it below 👇',
       numberOfLines: 3,
-      initialValue: alreadySync()
+      initialValue: getPreference('spreadsheetID') == null ? '' : `https://docs.google.com/spreadsheets/d/${getPreference('spreadsheetID')}`
     },
     (err, value) => {
       if (err) {
@@ -22,7 +22,7 @@ export default function syncIpsum() {
           {
             description: 'Type the name of the ipsums sheet (⚠️ case sensitive)',
             numberOfLines: 1,
-            initialValue: getPreference('sheetName')
+            initialValue: getPreference('sheetName') == null ? '' : getPreference('sheetName')
           },
           (err, value) => {
             if (err) {
@@ -46,17 +46,4 @@ function getID(input) {
   var ID = splitURL[5];
   return ID
 
-};
-
-function alreadySync() {
-
-  var ID = getPreference('spreadsheetID');
-  var google = validateURL();
-  var url = 'https://docs.google.com/spreadsheets/d/'+ ID;
-
-  if (ID == 'empty' || url.indexOf(google) == -1) {
-    return
-  } else {
-    return url
-  }
 }
