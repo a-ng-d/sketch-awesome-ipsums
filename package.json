@@ -1,7 +1,7 @@
 {
   "name": "sketch-awesome-ipsums",
   "description": "Generate ipsums from an external Google spreadsheet. Make these datas collaborative!",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "sketch": ">=49.0"
   },
