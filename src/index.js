@@ -16,7 +16,7 @@ export function getPreference(key) {
   var userDefaults = NSUserDefaults.standardUserDefaults();
   if (!userDefaults.dictionaryForKey(pluginIdentifier)) {
     var defaultPreferences = NSMutableDictionary.alloc().init();
-    defaultPreferences.setObject_forKey('empty', key);
+    //defaultPreferences.setObject_forKey('', key);
 
     userDefaults.setObject_forKey(defaultPreferences, pluginIdentifier);
     userDefaults.synchronize()
