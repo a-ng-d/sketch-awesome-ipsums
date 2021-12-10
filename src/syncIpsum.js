@@ -10,9 +10,10 @@ export default function syncIpsum() {
       initialValue: alreadySync()
     },
     (err, value) => {
-      var google = validateURL();
-      if (err || value.indexOf(google) == -1) {
-        return sketch.UI.alert('Houston, there\'s a problem 😓', 'Please, try again.')
+      if (err) {
+        return
+      } else if (value.indexOf('https://docs.google.com') == -1 || value == undefined) {
+        return sketch.UI.alert('Watch your URL!', 'Copy and paste the Google spreadsheet URL from your browser bar')
       } else {
         var ID = getID(value);
         savePreference('spreadsheetID', ID);
@@ -25,7 +26,9 @@ export default function syncIpsum() {
           },
           (err, value) => {
             if (err) {
-              return sketch.UI.alert('Houston, there\'s a problem 😓', 'Please, try again.')
+              return
+            } else if (value == undefined) {
+              return sketch.UI.alert('Cannot be empty!', 'Copy and paste the name of the sheet')
             } else {
               savePreference('sheetName', value);
               sketch.UI.message('The ipsums are on the track! 🔥')
@@ -56,14 +59,4 @@ function alreadySync() {
   } else {
     return url
   }
-
-}
-
-function validateURL() {
-
-  var standardURL = 'https://docs.google.com/';
-  var splitURL = standardURL.split('/');
-  var getGoogle = splitURL[2];
-  return getGoogle
-
 }
