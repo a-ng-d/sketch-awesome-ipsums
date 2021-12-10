@@ -1,6 +1,7 @@
 import sketch from 'sketch';
-import {getPreference, getValues, sortedData, getIpsum} from './index';
-import {text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache} from './index';
+import syncIpsum from './syncIpsum';
+import { getPreference, getValues, sortedData, getIpsum } from './index';
+import { text, document,selectedLayers, selectedCount, canvasView, selectedArtboard, selectedPage, pluginCache } from './index';
 
 var ID = getPreference('spreadsheetID'),
     SHEET = getPreference('sheetName');

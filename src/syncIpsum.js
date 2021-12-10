@@ -1,6 +1,6 @@
 import sketch from 'sketch';
-import {getPreference, savePreference, pluginCache} from './index';
-    } else {
+import { getPreference, savePreference, pluginCache } from './index';
+
 export default function syncIpsum() {
   sketch.UI.getInputFromUser(
     "Sync. your awesome ipsums from your Google spreadsheet (1/2)",
@@ -38,7 +38,7 @@ export default function syncIpsum() {
       }
     }
   )
-}
+};
 
 function getID(input) {
 
