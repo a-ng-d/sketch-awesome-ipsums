@@ -50,6 +50,6 @@ Once published:
 ## Support
 
 - Follow me on [Twitter 🐦](https://twitter.com/inVoltag)
-- [Shoot me a coffee ☕️](http://paypal.me/augrimaud)
+- [Shoot me a coffee ☕️](https://www.buymeacoffee.com/inVoltag)
 
 inVoltag/Aurélien Grimaud ⚡️
