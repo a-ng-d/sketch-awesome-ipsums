@@ -23,6 +23,13 @@
     "start": "skpm-build --watch --run",
     "postinstall": "npm run build && skpm-link"
   },
+  "keywords": [
+    "spreadsheet",
+    "faker",
+    "sketch-plugin",
+    "lorem-ipsum-generator",
+    "collaborative-editing"
+  ],
   "devDependencies": {
     "@skpm/builder": "^0.8.0"
   },
