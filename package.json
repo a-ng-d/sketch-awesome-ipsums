@@ -26,5 +26,6 @@
   "devDependencies": {
     "@skpm/builder": "^0.8.0"
   },
-  "author": "Aurélien Grimaud <a.grimaud@involt.io>"
+  "author": "Aurélien Grimaud <a.grimaud@involt.io>",
+  "license": "CC-BY 4.0"
 }
