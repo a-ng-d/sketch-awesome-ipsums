@@ -24,7 +24,7 @@
     "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.7.0"
+    "@skpm/builder": "^0.8.0"
   },
   "author": "Aurélien Grimaud <a.grimaud@involt.io>"
 }
