@@ -9,7 +9,7 @@
         - Update an existing text with a random ipsum
         - Create a text box with a random ipsum
       <description/>
-      <enclosure url="https://github.com/inVoltag/awesome-ipsums/releases/download/v1.0.0/awesome-ipsums.sketchplugin.zip" sparkle:version="1.0.0"/>
+      <enclosure url="https://github.com/a-ng-d/awesome-ipsums/releases/download/v1.0.0/awesome-ipsums.sketchplugin.zip" sparkle:version="1.0.0"/>
     </item>
     <item>
       <title>v1.1.0 - Google API migration</title>
@@ -19,18 +19,18 @@
         - The sheet name is required to make the plugin operate
 
         Minor changes:
-        - Bump acorn from 6.3.0 to 6.4.1 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/1
-        - Bump elliptic from 6.5.1 to 6.5.3 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/3
-        - Bump lodash from 4.17.15 to 4.17.19 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/2
-        - Bump path-parse from 1.0.6 to 1.0.7 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/10
-        - Bump browserslist from 4.7.0 to 4.16.6 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/9
-        - Bump lodash from 4.17.19 to 4.17.21 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/8
-        - Bump yargs-parser from 13.1.1 to 13.1.2 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/4
-        - Bump elliptic from 6.5.3 to 6.5.4 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/5
-        - Bump y18n from 4.0.0 to 4.0.1 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/6
-        - Bump ssri from 6.0.1 to 6.0.2 by @dependabot in https://github.com/inVoltag/sketch-awesome-ipsums/pull/7
+        - Bump acorn from 6.3.0 to 6.4.1 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/1
+        - Bump elliptic from 6.5.1 to 6.5.3 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/3
+        - Bump lodash from 4.17.15 to 4.17.19 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/2
+        - Bump path-parse from 1.0.6 to 1.0.7 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/10
+        - Bump browserslist from 4.7.0 to 4.16.6 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/9
+        - Bump lodash from 4.17.19 to 4.17.21 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/8
+        - Bump yargs-parser from 13.1.1 to 13.1.2 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/4
+        - Bump elliptic from 6.5.3 to 6.5.4 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/5
+        - Bump y18n from 4.0.0 to 4.0.1 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/6
+        - Bump ssri from 6.0.1 to 6.0.2 by @dependabot in https://github.com/a-ng-d/sketch-awesome-ipsums/pull/7
       <description/>
-      <enclosure url="https://github.com/inVoltag/awesome-ipsums/releases/download/v1.1.0/awesome-ipsums.sketchplugin.zip" sparkle:version="1.1.0"/>
+      <enclosure url="https://github.com/a-ng-d/awesome-ipsums/releases/download/v1.1.0/awesome-ipsums.sketchplugin.zip" sparkle:version="1.1.0"/>
     </item>
   </channel>
 </rss>

@@ -44,7 +44,7 @@ Once published:
 
 ## Contribution
 
-- Submit bugs or improvement requests by opening [issues](https://github.com/inVoltag/awesome-ipsums/issues)
+- Submit bugs or improvement requests by opening [issues](https://github.com/a-ng-d/awesome-ipsums/issues)
 - Feel free to make pull requests 😎
 
 ## Support
